@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Bookmark",
+  "version": "0.1",
+  "content_scripts": [
+	  {
+	    "matches": ["<all_urls>" ],
+	    "js": [ "jquery-3.3.1.js","content.js"]
+	  }
+	],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+	  "default_popup": "sketch/p5/example/index.html",
+	  "default_title" : "Bookmark"
+	},
+	"permissions": [
+          "bookmarks",
+          "tabs"
+        ]
+}
